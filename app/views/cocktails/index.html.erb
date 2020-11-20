@@ -1,0 +1,29 @@
+<div class="navbar-index">
+  <div class="border-navbar">
+    <h1 class="textshadow">COCKTAILS APP</h1>
+    <div class="uppertext-navbar"> 
+      <h2><i>Drink More</i></h2> 
+    </div>
+  </div>
+</div>
+
+<div class="undernavbar-container">
+  <div class="container">
+
+    <div class="card-grid">
+      <% @cocktails.each do |cocktail| %>
+          <div class="card mt-5 d-flex" data-aos="fade-up">
+            <div class="cocktail-title">
+              <%= cocktail.name %>
+            </div>
+            <%= cocktail.ingredients[0..1].map{|ingredient| ingredient.name}.join(", ") %>...
+            <%= link_to "More infos", cocktail_path(cocktail), class: "cocktail-link-button" %>
+          </div>
+      <% end %>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <%= link_to 'Add a new Cocktail', new_cocktail_path, class: "button-cocktail-purple m-5" %>
+    </div>
+  </div>
+</div>

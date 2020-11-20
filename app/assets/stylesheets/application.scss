@@ -7,7 +7,102 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import 'select2/dist/css/select2';
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+html, body {
+  background-color: #1D1E22;
+}
+
+.undernavbar-container {
+  background-color: #1D1E22;
+}
+
+.cocktail-description {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.card {
+  display: flex;
+  height: 300px;
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+  box-shadow: 0 0 12px $purple, 0 0 12px $purple inset;
+}
+
+.border-cocktail-title {
+  border: 4px solid $white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 12px $green-glow, 0 0 12px $green-glow inset;
+  color: $red;
+  text-shadow: 0 0 12px $red-glow;
+  letter-spacing: 8px;
+  font-size: 40px;
+  width: 100%;
+}
+
+.cocktail-image-div {
+  display: block;
+  width: 50%;
+  height: 80vh;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.cocktail-image {
+  width: 50%;
+  height: 80vh;
+  object-fit: cover; 
+}
+
+.cocktail-infomation {
+  margin-left: 40px;
+}
+
+.ingredient-list {
+  &:a {
+    text-decoration: none;
+  }
+}
+
+.cocktail-new {
+  color: white;
+}
+
+.border-cocktail-new-title {
+  width: 600px;
+  height: 200px;
+  border: 4px solid $white;
+  border-radius: 10px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 12px $green-glow, 0 0 12px $green-glow inset;
+  color: $red;
+  text-shadow: 0 0 12px $red-glow;
+  letter-spacing: 4px;
+  font-size: 32px;
+}
+
+.text-new-cocktail {
+  text-shadow: 0 0 12px $blue-glow;
+  color: $blue;
+  bottom: 270px;
+  font-size: 40px;
+  letter-spacing: 8px;
+}

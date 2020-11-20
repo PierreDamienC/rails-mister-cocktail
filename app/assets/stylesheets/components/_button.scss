@@ -1,0 +1,104 @@
+.button-cocktail-purple {
+  text-decoration: none;
+  color: white;
+  text-shadow: 0 0 12px #7A00AB;
+  box-shadow: 0 0 12px $purple, 0 0 12px $purple inset;
+  border: 1px solid white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #1D1E22;
+  &:hover {
+    text-decoration-style: none;
+    color: grey;
+    text-shadow: 0 0 12px #470078;
+    box-shadow: 0 0 12px #600091, 0 0 12px #600091 inset;
+    text-decoration: none;
+  }
+}
+
+.cocktail-link-button {
+  text-decoration: none;
+  color: $blue;
+  &:hover {
+    text-decoration-style: none;
+    text-shadow: 0 0 12px $blue-glow;
+    color: $blue;
+  }
+}
+
+.button-purple-new-cocktail {
+  text-decoration: none;
+  color: white;
+  text-shadow: 0 0 12px #7A00AB;
+  box-shadow: 0 0 12px $purple, 0 0 12px $purple inset;
+  border: 1px solid white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: grey;
+  &:hover {
+    text-decoration-style: none;
+    color: #470078;
+    text-shadow: 0 0 12px #470078;
+    box-shadow: 0 0 12px #600091, 0 0 12px #600091 inset;
+  }
+}
+
+.button-purple-dose {
+  text-decoration: none;
+  color: white;
+  text-shadow: 0 0 12px #7A00AB;
+  box-shadow: 0 0 12px $purple, 0 0 12px $purple inset;
+  border: 1px solid white;
+  padding: 10px 10px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: grey;
+  &:hover {
+    text-decoration-style: none;
+    color: #470078;
+    text-shadow: 0 0 12px #470078;
+    box-shadow: 0 0 12px #600091, 0 0 12px #600091 inset;
+  }
+}
+
+.button-home {
+  text-decoration: none;
+  color: white;
+  text-shadow: 0 0 12px #7A00AB;
+  box-shadow: 0 0 12px $purple, 0 0 12px $purple inset;
+  border: 1px solid white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #1D1E22;
+  &:hover {
+    text-decoration-style: none;
+    color: grey;
+    text-shadow: 0 0 12px #470078;
+    box-shadow: 0 0 12px #600091, 0 0 12px #600091 inset;
+  }
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.icone-edit {
+  text-decoration: none;
+  text-shadow: 0 0 12px $blue-glow;
+  color: $blue;
+  &:hover {
+    text-decoration-style: none;
+    text-decoration: none;
+  }
+}
+
+.icone-delete {
+  text-decoration: none;
+  text-shadow: 0 0 12px $red-glow;
+  color: $red;
+  &:hover {
+    text-decoration-style: none;
+  }
+}

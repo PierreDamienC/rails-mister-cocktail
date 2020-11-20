@@ -1,6 +1,45 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+$blue: #14a5ff;
+$blue-glow: #22cef9;
+$red: #f90000;
+$red-glow: #ff1919;
+$bkg: #222;
+$green-glow: #b3ff51;
+$green: #0cd808;
+$purple: #C62EF7;
+
+.navbar-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://images.unsplash.com/photo-1578664182391-acdf392468a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  background-size: cover;
+  background-position: center;
+  color: $red;
+  height: 100vh;
+}
+
+.border-navbar {
+  width: 600px;
+  height: 150px;
+  border: 4px solid $white;
+  border-radius: 10px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 12px $green-glow, 0 0 12px $green-glow inset;
+}
+
+.textshadow {
+  text-shadow: 0 0 12px $red-glow;
+  letter-spacing: 15px;
+}
+
+.uppertext-navbar {
+  text-shadow: 0 0 12px $blue-glow;
+  color: $blue;
+  bottom: 270px;
 }
 
 .navbar-lewagon .navbar-collapse {

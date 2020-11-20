@@ -1,0 +1,38 @@
+<%= link_to cocktails_path, class: "button-home" do %>
+	<i class="fas fa-cocktail">Home</i>
+<% end %>
+<div class="cocktail-new container">
+  <div class="d-flex justify-content-center">
+		<div class="border-cocktail-new-title mt-5">
+			<div class="text-new-cocktail"> 
+				<p> Create a Cocktail</p>
+			</div>
+      <p> Be inventive </p>
+			</div>
+	</div>
+
+  <div class="row mt-5">
+    <div class="col-12">
+        <%= simple_form_for(@cocktail) do |f|%>
+        <%= f.input :name %>
+        <div class="row">
+            <div class="col-3">
+              <%= f.association :ingredients, collection: Ingredient.order(:name).all[0..24], as: :check_boxes %>
+            </div>
+            <div class="col-3">
+              <%= f.association :ingredients, collection: Ingredient.order(:name).all[25..49], label: "",as: :check_boxes %>
+            </div>
+            <div class="col-3">
+              <%= f.association :ingredients, collection: Ingredient.order(:name).all[50..74], label: "",as: :check_boxes %>
+            </div>
+            <div class="col-3">
+              <%= f.association :ingredients, collection: Ingredient.order(:name).all[75..100], label: "",as: :check_boxes %>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <%= f.submit "Submit", class: "button-purple-new-cocktail mb-5" %>
+        </div>
+    <% end %>
+    </div>
+  </div>
+</div>

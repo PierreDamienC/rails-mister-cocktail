@@ -1,0 +1,38 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  justify-items: center;
+}
+
+.card-cocktail-ingredients {
+  border: 4px solid $white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 12px $blue-glow, 0 0 12px $blue-glow inset;
+  color: $green-glow;
+  text-shadow: 0 0 12px $green-glow;
+  font-size: 16px;
+  width: 100%;
+}
+
+.cocktail-title {
+  color: $red;
+  font-size: 24px;
+}
+
+.dose-title {
+  color: red;
+  text-shadow: 0 0 12px red;
+  font-size: 24px;
+}
+
+.cocktail-link {
+  text-decoration: none;
+  &hover {
+    text-decoration-style: none;
+  }
+}

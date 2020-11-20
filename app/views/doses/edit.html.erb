@@ -1,0 +1,24 @@
+<%= link_to cocktail_path(@cocktail), class: "button-home" do %>
+	  <i class="fas fa-cocktail">Back</i>
+<% end %>
+<div class="container">
+  <div class="d-flex justify-content-center">
+		<div class="border-cocktail-new-title mt-5">
+			<div class="text-new-cocktail"> 
+				<p> Edit a Cocktail</p>
+			</div>
+      <p> Be precise </p>
+			</div>
+	</div>
+  <div class="row mt-5">
+    <div class="col-12">
+      <%= simple_form_for [@cocktail, @dose] do |f|%>
+      <%= f.input :description %>
+      <%= f.input :ingredient_id, collection: Ingredient.all.order(:name), input_html: { class: 'select2' } %>
+      <div class="d-flex justify-content-center align-items-center">
+        <%= f.submit "Submit", class: "button-purple-new-cocktail mt-3 mb-5" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
