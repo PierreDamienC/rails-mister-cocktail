@@ -26,18 +26,6 @@ html, body {
   width: 50%;
 }
 
-.card {
-  display: flex;
-  height: 300px;
-  width: 300px;
-  align-items: center;
-  justify-content: center;
-  background-color: grey;
-  color: white;
-  border-radius: 5px;
-  border: 1px solid white;
-  box-shadow: 0 0 12px $purple, 0 0 12px $purple inset;
-}
 
 .border-cocktail-title {
   border: 4px solid $white;

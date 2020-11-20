@@ -36,3 +36,36 @@
     text-decoration-style: none;
   }
 }
+
+.card {
+  display: flex;
+  height: 300px;
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+  box-shadow: 0 0 12px $purple, 0 0 12px $purple inset;
+  background-position: center;
+  background-size: cover;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.not-flipped {
+  .cocktail-title {
+    visibility: hidden;
+  }
+  .cocktail-link-button {
+    visibility: hidden;
+  }
+  .cocktail-ingredients-home {
+    visibility: hidden;
+  }
+}
+
+.flipped {
+  background-color: grey;
+  background-image: none !important;
+}
