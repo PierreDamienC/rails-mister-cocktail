@@ -45,15 +45,13 @@ html, body {
 .cocktail-image-div {
   display: block;
   width: 50%;
-  height: 80vh;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-top: 18vh;
 }
 
 .cocktail-image {
   width: 50%;
   height: 80vh;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 .cocktail-infomation {
@@ -61,6 +59,7 @@ html, body {
 }
 
 .ingredient-list {
+  font-size: 20px;
   &:a {
     text-decoration: none;
   }

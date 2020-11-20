@@ -1,9 +1,9 @@
   <%= link_to cocktails_path, class: "button-home" do %>
 	  <i class="fas fa-cocktail">Home</i>
 	<% end %>
-  <div class="d-flex justify-content-around">
-		<div class="cocktail-image-div d-flex justify-content-center align-items-center">
-		  <img src="https://images.unsplash.com/photo-1578664182391-acdf392468a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="" class="cocktail-image">
+  <div class="d-flex justify-content-around m-0">
+		<div class="cocktail-image-div d-flex justify-content-center">
+		  <%= cl_image_tag @cocktail.photo.key, class:"cocktail-image" %>
 		</div>
 		<div class="cocktail-description mb-5">
 			<div class="container" style="padding: 0 10%;">
@@ -25,7 +25,7 @@
 								<%= link_to edit_cocktail_dose_path(@cocktail, Dose.where(ingredient: ingredient, cocktail: @cocktail)[0]) do %>
 								  <i class="icone-edit fas fa-edit"></i>
 								<% end %>
-								<%= link_to cocktail_dose_path(@cocktail, Dose.where(ingredient: ingredient, cocktail: @cocktail)[0]), method: :delete do %>
+								<%= link_to cocktail_dose_path(@cocktail, Dose.where(ingredient: ingredient, cocktail: @cocktail)[0]), method: :delete, data: { confirm: 'Are you sure?' } do %>
 								  <i class="icone-delete far fa-trash-alt"></i>
 								<% end %>
 							</li>
@@ -35,7 +35,7 @@
 				</div>
 
 				<div class="d-flex justify-content-center">
-					<div class="card">
+					<div class="card-new-dose">
 						<div class="dose-title mt-3">
 							<p>Add Ingredient</p>
 						</div>

@@ -37,6 +37,20 @@
   }
 }
 
+.card-new-dose {
+  display: flex;
+  height: 300px;
+  width: 300px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+  box-shadow: 0 0 12px $purple, 0 0 12px $purple inset;
+  background-color: grey;
+}
+
 .card {
   display: flex;
   height: 300px;

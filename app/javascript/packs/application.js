@@ -2,11 +2,12 @@
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
+
 import 'bootstrap';
 import { initSelect2 } from '../components/init_select2';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import {cardflip, card_flip} from '../plugins/card_flip';
+import { cardFlip } from '../plugins/card_flip';
 
 require("@rails/ujs").start()
 require("turbolinks").start()
@@ -16,7 +17,7 @@ require("channels")
 document.addEventListener("turbolinks:load", function() {
   initSelect2();
   AOS.init();
-  cardflip();
+  cardFlip();
 });
 
 

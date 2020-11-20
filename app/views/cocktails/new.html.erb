@@ -29,6 +29,7 @@
               <%= f.association :ingredients, collection: Ingredient.order(:name).all[75..100], label: "",as: :check_boxes %>
             </div>
         </div>
+        <%= f.input :photo, as: :file %>
         <div class="d-flex justify-content-center align-items-center">
           <%= f.submit "Submit", class: "button-purple-new-cocktail mb-5" %>
         </div>
