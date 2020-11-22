@@ -39,7 +39,7 @@
 						</div>
 						<%= simple_form_for [@cocktail, @dose] do |f|%>
 							<%= f.input :description %>
-							<%= f.input :ingredient_id, collection: Ingredient.all.order(:name), input_html: { class: 'select2 input-medium' } %>
+							<%= f.input :ingredient_id, collection: Ingredient.all.order(:name), input_html: { class: 'select2' } %>
 							<div class="text-center">
 								<%= f.submit "Submit", class: "button-purple-dose m-3" %>
 							</div>
@@ -61,7 +61,17 @@
 					</div>
 					<ul class="text-align-right ml-3">
 					  <% @cocktail.reviews.each do |review| %>
-						  <li> <%= review.content %> <%= review.rating %> </li>
+						  <li> <%= review.content %> <% if review.rating.class == Float %>
+								<% review.rating.times do %>
+									<i class='fas fa-star'></i> 
+								<% end %>
+								<% else %>
+								<% review.rating.times do %>
+									<i class='fas fa-star'></i> 
+								<% end %> 
+								<i class="fas fa-star-half"></i>
+							<% end %> 
+							</li>
 						<% end %>
 					</ul>
 				</div>
