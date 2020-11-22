@@ -25,8 +25,8 @@
 }
 
 .dose-title {
-  color: red;
-  text-shadow: 0 0 12px red;
+  color: $blue-glow;
+  text-shadow: 0 0 12px $blue-glow;
   font-size: 24px;
 }
 
@@ -38,7 +38,6 @@
 }
 
 .card-new-dose {
-  display: flex;
   height: 300px;
   width: 300px;
   flex-direction: column;
@@ -81,6 +80,9 @@
   transition: transform 1s;
   transform-style: preserve-3d;
   position: relative;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .not-flipped {
@@ -103,4 +105,16 @@
 .flipped {
   background-color: grey;
   background-image: none !important;
+}
+
+
+.dose-form {
+  border-radius: 5px;
+  padding: 15px;
+  color: $green-glow;
+  text-shadow: 0 0 12px $green-glow;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
 }
