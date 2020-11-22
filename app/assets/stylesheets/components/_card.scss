@@ -49,6 +49,7 @@
   border: 1px solid white;
   box-shadow: 0 0 12px $purple, 0 0 12px $purple inset;
   background-color: grey;
+  display: none;
 }
 
 .card {
@@ -65,17 +66,23 @@
   background-size: cover;
   transition: transform 1s;
   transform-style: preserve-3d;
+  position: relative;
 }
 
 .not-flipped {
   .cocktail-title {
-    visibility: hidden;
+    display: block;
+    color: white;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-weight: bolder;
   }
   .cocktail-link-button {
-    visibility: hidden;
+    display: none;
   }
   .cocktail-ingredients-home {
-    visibility: hidden;
+    display: none;
   }
 }
 

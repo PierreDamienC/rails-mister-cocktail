@@ -12,15 +12,15 @@
 						<div class="uppertext-navbar"> 
 							<p>Cocktail</p> 
 						</div>
-						<p> <%= @cocktail.name %> </p>
+						<p class="text-center p-3"> <%= @cocktail.name %> </p>
 					</div>
 				</div>
-				<div class="card-cocktail-ingredients d-flex justify-content-center my-5">
+				<div class="card-cocktail-ingredients d-flex justify-content-center my-5 position-relative">
 					<div class="ingredient-list d-flex justify-content-center align-items-center text-center m-5">
 						<ul>
 							<h3> Recipe</h3>
 							<% @cocktail.ingredients.order(:name).each do |ingredient| %> 
-							<li> 
+							<li class="list-unstyled"> 
 								<%= ingredient.name %> : <%= Dose.where(ingredient: ingredient, cocktail: @cocktail)[0].description %>
 								<%= link_to edit_cocktail_dose_path(@cocktail, Dose.where(ingredient: ingredient, cocktail: @cocktail)[0]) do %>
 								  <i class="icone-edit fas fa-edit"></i>
@@ -30,19 +30,20 @@
 								<% end %>
 							</li>
 							<% end %>
+							<a href="#" class="button-purple-add" id="button-purple-add"> <i class="fas fa-plus"></i> Add an Ingredient </a>
 						</ul>
 					</div>
 				</div>
 
 				<div class="d-flex justify-content-center">
 					<div class="card-new-dose">
-						<div class="dose-title mt-3">
+						<div class="dose-title mt-3 text-center">
 							<p>Add Ingredient</p>
 						</div>
 						<div class="m-3">
 							<%= simple_form_for [@cocktail, @dose] do |f|%>
 								<%= f.input :description %>
-								<%= f.input :ingredient_id, collection: Ingredient.all.order(:name), input_html: { class: 'select2' } %>
+								<%= f.input :ingredient_id, collection: Ingredient.all.order(:name), input_html: { class: 'select2 w-100' } %>
 								<div class="text-center">
 									<%= f.submit "Submit", class: "button-purple-dose" %>
 								</div>

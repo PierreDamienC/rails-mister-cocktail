@@ -8,6 +8,8 @@ import { initSelect2 } from '../components/init_select2';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { cardFlip } from '../plugins/card_flip';
+import { addIngredient } from '../plugins/add_ingredient';
+import { searchCocktails } from '../plugins/search_cocktails'
 
 require("@rails/ujs").start()
 require("turbolinks").start()
@@ -18,6 +20,12 @@ document.addEventListener("turbolinks:load", function() {
   initSelect2();
   AOS.init();
   cardFlip();
+  // if (document.getElementById('cocktails-search') !== null ) {
+  //   searchCocktails();
+  // };
+  if (document.getElementById("button-purple-add") !== null) {
+    addIngredient();
+  };
 });
 
 
