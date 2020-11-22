@@ -10,6 +10,7 @@ import 'aos/dist/aos.css'
 import { cardFlip } from '../plugins/card_flip';
 import { addIngredient } from '../plugins/add_ingredient';
 import { addReview } from '../plugins/add_review'
+import { dynamicRating } from '../plugins/fill_stars'
 import { searchCocktails } from '../plugins/search_cocktails'
 
 require("@rails/ujs").start()
@@ -30,6 +31,7 @@ document.addEventListener("turbolinks:load", function() {
   if (document.getElementById("button-purple-add-review") !== null) {
     addReview();
   };
+  dynamicRating();
 });
 
 
