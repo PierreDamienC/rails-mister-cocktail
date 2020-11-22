@@ -3,13 +3,13 @@
 	<% end %>
   <div class="d-flex justify-content-around m-0">
 		<div class="cocktail-image-div d-flex justify-content-center">
-		  <%= cl_image_tag @cocktail.photo.key, class:"cocktail-image" %>
+		  <img src="<%= @cocktail.photo.attachment ?  (cl_image_path @cocktail.photo.key) : "https://images.unsplash.com/photo-1578664182391-acdf392468a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" %>" alt="" class="cocktail-image">
 		</div>
 		<div class="cocktail-description mb-5">
 			<div class="container" style="padding: 0 10%;">
 				<div class="d-flex justify-content-center">
 					<div class="border-cocktail-title mt-5">
-						<div class="uppertext-navbar"> 
+					    <div class="uppertext-navbar"> 
 							<p>Cocktail</p> 
 						</div>
 						<p class="text-center p-3"> <%= @cocktail.name %> </p>
@@ -50,6 +50,25 @@
 							<% end %>
 						</div>
 					</div>
+				</div>
+
+				<div class="card-reviews mt-3 position-relative">
+				  <h3 class="text-left p-3">Reviews</h3>
+					<a href="#" class="button-purple-add-review" id="button-purple-add-review"> <i class="fas fa-plus"></i> Add a Review </a>
+					<div class="review-form justify-content-center align-items-center m-3">
+						<%= simple_form_for [@cocktail, @review] do |f|%>
+							<%= f.input :content %>
+							<%= f.input :rating, collection: [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5] %>
+							<div class="text-center">
+								<%= f.submit "Submit", class: "button-purple-dose" %>
+							</div>
+						<% end %>
+					</div>
+					<ul class="text-align-right ml-3">
+					  <% @cocktail.reviews.each do |review| %>
+						  <li> <%= review.content %> <%= review.rating %> </li>
+						<% end %>
+					</ul>
 				</div>
 			</div>
 		</div>

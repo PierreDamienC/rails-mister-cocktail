@@ -1,12 +1,14 @@
 class CocktailsController < ApplicationController
 
   def index
+    search_term = params[:search]
     @cocktails = Cocktail.all
   end
 
   def show
     @cocktail = Cocktail.find(params[:id])
     @dose = Dose.new
+    @review = Review.new
   end
 
   def new

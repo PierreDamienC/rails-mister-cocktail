@@ -102,6 +102,25 @@
   }
 }
 
+.button-purple-add-review {
+  text-decoration: none;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  color: white;
+  text-shadow: 0 0 12px $red-glow;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  &:hover {
+    text-decoration-style: none !important;
+    color: $red-glow;
+    text-shadow: 0 0 12px $red-glow;
+  }
+}
+
 .button-home {
   text-decoration: none;
   color: white;
